@@ -1,0 +1,79 @@
+---
+- name: Install dependencies on Raspberry Pis in Cloudsys Lab
+  hosts: raspberry_pis
+  become: yes
+
+  tasks:
+    - name: Update package list (Allow longer retries)
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+      retries: 10
+      delay: 10
+      register: apt_update
+      until: apt_update is success
+
+    - name: Install required system dependencies (Allow for slow downloads)
+      apt:
+        name:
+          - python3
+          - python3-pip
+          - libopenblas-dev
+          - libatlas-base-dev
+          - libffi-dev
+          - libssl-dev
+          - python3-dev
+          - build-essential
+          - cmake
+          - ffmpeg
+        state: present
+      retries: 10
+      delay: 10
+      register: package_install
+      until: package_install is success
+
+    - name: Upgrade pip to the latest version
+      command: python3 -m pip install --upgrade pip --timeout 300
+      retries: 5
+      delay: 60
+      register: result
+      until: result.rc == 0
+
+    - name: Install PyTorch and torchvision (Allow longer timeout)
+      command: pip3 install torch torchvision --break-system-packages
+      retries: 10
+      delay: 10
+      register: pip_install
+      until: pip_install is success
+
+    - name: Upgrade NumPy (Allow longer timeout)
+      command: pip3 install --upgrade numpy --break-system-packages
+      retries: 10
+      delay: 10
+      register: numpy_upgrade
+      until: numpy_upgrade is success
+
+    - name: Gather system facts
+      setup:
+
+    - name: Get CPU Usage
+      shell: "top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}'"
+      register: cpu_usage
+
+    - name: Get Memory Usage
+      shell: "free -m | awk 'NR==2{printf \"%.2f\", $3*100/$2 }'"
+      register: memory_usage
+
+    - name: Get Disk Usage
+      shell: "df -h / | awk 'NR==2 {print $5}'"
+      register: disk_usage
+
+    - name: Check PyTorch Version
+      shell: "python3 -c 'import torch; print(torch.__version__)'"
+      register: torch_version
+      ignore_errors: yes  # Skip errors if PyTorch isn't installed
+
+    # Display the gathered stats
+    - name: Display Raspberry Pi Statistics
+      debug:
+        msg: "Host: {{ inventory_hostname }} CPU Usage: {{ cpu_usage.stdout }}% Memory Usage: {{ memory_usage.stdout }}% Disk Usage: {{ disk_usage.stdout }} PyTorch Version: {{ torch_version.stdout | default('Not Installed') }}"
