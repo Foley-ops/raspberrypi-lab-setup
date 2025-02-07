@@ -1,53 +1,47 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.11">
   <diagram name="Page-1" id="yOMUYsQ2WJe-NuKA5KxX">
-    <mxGraphModel dx="798" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1194" dy="1214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="kTC8m_07FqlrhS2wxTmq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-1" target="kTC8m_07FqlrhS2wxTmq-9">
+        <mxCell id="kTC8m_07FqlrhS2wxTmq-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-1" target="kTC8m_07FqlrhS2wxTmq-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-1" value="" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
-          <mxGeometry x="135" y="60" width="80" height="80" as="geometry" />
+          <mxGeometry x="110" y="165" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-3" value="Training Server (GPU, PyTorch)" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="80" y="40" width="190" height="30" as="geometry" />
+          <mxGeometry x="55" y="140" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-9" target="kTC8m_07FqlrhS2wxTmq-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-9" value="Train Model" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="120" y="180" width="110" height="50" as="geometry" />
+          <mxGeometry x="250" y="180" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-10" target="kTC8m_07FqlrhS2wxTmq-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-10" value="Convert Model to TorchScript" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="260" y="180" width="110" height="50" as="geometry" />
+          <mxGeometry x="390" y="180" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="kTC8m_07FqlrhS2wxTmq-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-11" target="kTC8m_07FqlrhS2wxTmq-16">
+        <mxCell id="kTC8m_07FqlrhS2wxTmq-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-11" target="kTC8m_07FqlrhS2wxTmq-26">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-11" value="Save model.pt" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="400" y="180" width="110" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="kTC8m_07FqlrhS2wxTmq-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-16" target="kTC8m_07FqlrhS2wxTmq-26">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="kTC8m_07FqlrhS2wxTmq-16" value="" style="image;html=1;image=img/lib/clip_art/computers/Network_128x128.png" vertex="1" parent="1">
-          <mxGeometry x="275" y="280" width="80" height="80" as="geometry" />
+          <mxGeometry x="530" y="180" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-18" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png" vertex="1" parent="1">
-          <mxGeometry x="165" y="480" width="60" height="60" as="geometry" />
+          <mxGeometry x="310" y="370" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-22" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png" vertex="1" parent="1">
-          <mxGeometry x="245" y="480" width="60" height="60" as="geometry" />
+          <mxGeometry x="390" y="370" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-23" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png" vertex="1" parent="1">
-          <mxGeometry x="325" y="480" width="60" height="60" as="geometry" />
+          <mxGeometry x="470" y="370" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-24" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png" vertex="1" parent="1">
-          <mxGeometry x="405" y="480" width="60" height="60" as="geometry" />
+          <mxGeometry x="550" y="370" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kTC8m_07FqlrhS2wxTmq-26" target="kTC8m_07FqlrhS2wxTmq-24">
           <mxGeometry relative="1" as="geometry" />
@@ -62,7 +56,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kTC8m_07FqlrhS2wxTmq-26" value="Send model.pt to Pis" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="250" y="390" width="130" height="50" as="geometry" />
+          <mxGeometry x="525" y="270" width="120" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
